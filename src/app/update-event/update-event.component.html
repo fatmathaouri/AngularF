@@ -1,0 +1,36 @@
+<div *ngIf="evenement" class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="titre">Titre</label>
+            <input type="text" class="form-control" id="titre" name="titre" [(ngModel)]="evenement.titre" required>
+        </div><br>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" [(ngModel)]="evenement.description" required>
+        </div>
+        <div class="form-group">
+            <label for="lieu">Lieu</label>
+            <input type="text" class="form-control" id="lieu" name="lieu" [(ngModel)]="evenement.lieu" required>
+        </div><br><br>
+        <!-- Ajoutez d'autres champs du formulaire en fonction de vos besoins -->
+        <button (click)="confirmUpdate()" class="btn btn-primary btn-block">Update</button>
+    </form>
+  </div>
+  
+  
+    <div class="modal fade" id="updateModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">update Confirmation</h5>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to update this event?</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger" (click)="closeUpdate()">No</button>
+            <button class="btn btn-secondary" (click)="updateEvent()">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>

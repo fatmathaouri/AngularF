@@ -1,0 +1,48 @@
+<div *ngIf="user" class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="nom">Titre</label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="user.nom_ut" required>
+        </div><br>
+        <div class="form-group">
+            <label for="prenom">Titre</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" [(ngModel)]="user.prenom_ut" required>
+        </div><br>
+        <div class="form-group">
+            <label for="username">Titre</label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" required>
+        </div><br>
+        <div class="form-group">
+            <label for="password">Titre</label>
+            <input type="text" class="form-control" id="password" name="password" [(ngModel)]="user.pass_ut" required>
+        </div><br>
+        <div class="form-group">
+            <label for="email">Titre</label>
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+        </div><br>
+        <div class="form-group">
+            <label for="rolename">Titre</label>
+            <input type="text" class="form-control" id="titre" name="rolename" [(ngModel)]="user.rolename" required>
+        </div><br>
+        
+        <!-- Ajoutez d'autres champs du formulaire en fonction de vos besoins -->
+        <button (click)="confirmUpdateUser()" class="btn btn-primary btn-block">Update</button>
+    </form>
+  </div>
+
+  <div class="modal fade" id="updateModall">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">update Confirmation</h5>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to update this event?</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-danger" (click)="closeUpdateUser()">No</button>
+          <button class="btn btn-secondary" (click)="updateUser()">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>

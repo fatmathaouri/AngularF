@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered SVG Animation</title>
+    <style>
+        * {
+            border: 0;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --hue: 223;
+            --bg: hsl(var(--hue),10%,90%);
+            --fg: hsl(var(--hue),10%,10%);
+            font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320px));
+        }
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font: 1em/1.5 sans-serif;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .svg-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text {
+            font-size: 6em; /* Augmenter la taille de la police */
+            text-anchor: middle;
+            fill: url(#text-grad); /* Utilisation du dégradé pour la couleur du texte */
+        }
+
+        .pl {
+            width: 50%; /* Définir la largeur du SVG */
+            height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
+        }
+
+        .pl__ring {
+            stroke: url(#ring-grad); /* Utilisation du dégradé pour la couleur du spinner */
+        }
+    </style>
+</head>
+<body>
+    <div class="svg-container">
+        <svg class="pl" viewBox="0 0 900 1000" xmlns="http://www.w3.org/2000/svg"> <!-- Ajuster la hauteur du viewBox -->
+            <defs>
+                <!-- Dégradé linéaire pour la couleur du texte -->
+                <linearGradient id="text-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#87CEEB" /> <!-- Bleu ciel -->
+                    <stop offset="100%" stop-color="#1E90FF" /> <!-- Bleu profond -->
+                </linearGradient>
+                <!-- Dégradé linéaire pour la couleur du spinner -->
+                <linearGradient id="ring-grad" x1="1" y1="0.5" x2="0" y2="0.5">
+                    <stop offset="0%" stop-color="#87CEEB" /> <!-- Bleu ciel -->
+                    <stop offset="100%" stop-color="#1E90FF" /> <!-- Bleu profond -->
+                </linearGradient>
+            </defs>
+            <circle class="pl__ring" cx="450" cy="450" r="400" fill="none" stroke-width="100" stroke-dasharray="0 514 2 514" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,450,450)" />
+            <line class="pl__ball" x1="450" y1="70" x2="450.01" y2="830" stroke-width="100" stroke-dasharray="2 760" stroke-linecap="round" />
+            <!-- Texte avec la couleur du dégradé -->
+            <text class="text" x="450" y="950">IT News & Events</text>
+        </svg>
+    </div>
+</body>
+</html>

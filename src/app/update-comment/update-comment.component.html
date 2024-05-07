@@ -1,0 +1,30 @@
+<div *ngIf="commentaire" class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="body">body</label>
+            <input type="text" class="form-control" id="body" name="body" [(ngModel)]="commentaire.body" required>
+        </div><br>
+       
+        <!-- Ajoutez d'autres champs du formulaire en fonction de vos besoins -->
+        <button (click)="confirmUpdateC()" class="btn btn-primary btn-block">Update</button>
+    </form>
+  </div>   
+   
+   
+     <div class="modal fade" id="updateComment">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title">update Confirmation</h5>
+           </div>
+           <div class="modal-body">
+             <p>Are you sure you want to update this article?</p>
+           </div>
+           <div class="modal-footer">
+             <button class="btn btn-danger" (click)="closeUpdateC()">No</button>
+             <button class="btn btn-secondary" (click)="updateC()">Yes</button>
+           </div>
+         </div>
+       </div>
+     </div>
+  

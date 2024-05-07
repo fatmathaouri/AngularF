@@ -1,0 +1,35 @@
+<div *ngIf="actualite" class="container mt-5">
+    <form>
+      <div class="form-group">
+        <label for="titre">Titre</label>
+        <input type="text" class="form-control input-field" id="titre" name="titre" [(ngModel)]="actualite.titre" required>
+      </div><br>
+      <div class="form-group">
+        <label for="description">Contenu</label>
+        <input type="text" class="form-control input-field" id="contenu" name="contenu" [(ngModel)]="actualite.contenu" required>
+      </div><br><br>
+      
+      <!-- Ajoutez d'autres champs du formulaire en fonction de vos besoins -->
+      <button (click)="confirmUpdateAc()" class="btn btn-primary btn-block">Update</button>
+    </form>
+  </div>
+     
+ 
+ 
+   <div class="modal fade" id="updateActualite">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title">update Confirmation</h5>
+         </div>
+         <div class="modal-body">
+           <p>Are you sure you want to update this news?</p>
+         </div>
+         <div class="modal-footer">
+           <button class="btn btn-danger" (click)="closeUpdateAc()">No</button>
+           <button class="btn btn-secondary" (click)="updateAc()">Yes</button>
+         </div>
+       </div>
+     </div>
+   </div>
+

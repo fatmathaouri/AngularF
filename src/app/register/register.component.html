@@ -1,0 +1,74 @@
+
+<head>
+	<title>Login V2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-26">
+						Welcome
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" id="nom" [(ngModel)]="user.nom_ut" name="nom_ut">
+						<span class="focus-input100" data-placeholder="Nom"></span>
+					</div>
+                    <div class="wrap-input100 validate-input">
+						<input class="input100" type="text"  id="prenom"[(ngModel)]="user.prenom_ut" name="prenom_ut">
+						<span class="focus-input100" data-placeholder="Prenom"></span>
+					</div>
+                    <div class="wrap-input100 validate-input">
+						<input class="input100"type="text"  id="username"[(ngModel)]="user.username" name="username">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+                    
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" id="password"[(ngModel)]="user.pass_ut" name="pass_ut">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+                    <div class="wrap-input100 validate-input">
+						<input class="input100" type="text"  id="confirm-password"[(ngModel)]="user.email" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+                    <label>
+                        <input type="radio" name="role" value="USER" [(ngModel)]="user.rolename" required> User
+                    </label>
+            
+                    <label>
+                        <input type="radio" name="role" value="ADMIN" [(ngModel)]="user.rolename" required> Admin
+                    </label>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" (click)="goToSignin()" type="submit">
+								Login
+							</button>
+						</div>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+
+</body>
