@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './modelss/user.model';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class UserService {
 
   private apiUrl="http://localhost:8082/"
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient ,private router : Router) { }
 
   getAllUsers(token :string): Observable<User[]>{
     const headers = new HttpHeaders({
@@ -42,5 +43,10 @@ export class UserService {
       "Authorization": "Bearer " + accessToken
     });
     return this.httpClient.get<User>(this.apiUrl + "getUserById/" + id, { headers });
+  }
+  loggout(){
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('userAuth');
+    this.router.navigate(['/']);
   }
 }

@@ -3,5 +3,6 @@ export interface evenement{
     titre:string;
     description:string;
     lieu:string;
+    imageURL:string;
     created:Date;
 }

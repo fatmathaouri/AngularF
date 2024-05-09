@@ -15,6 +15,7 @@ export class RegisterComponent {
     prenom_ut:"",
     username:"",
     pass_ut:"",
+    imageURL:"./assets/img/OIP.jpeg",
    
     email:"",
     rolename:""
@@ -26,19 +27,22 @@ export class RegisterComponent {
   constructor (private router : Router,private authenticationService:AuthenticationService){}
   goToSignin(){
     this.authenticationService.register(this.user).subscribe(newUser=>{
+    
       console.log("user added ")
       this.resetForm()
      
       
       
 
-    this.router.navigate(['login'])
+    
     }, error =>{
       console.log("erreur",error)
-    }
+    } 
+     
   )
-    
+  this.router.navigate(['login'])
   }
+
 
 
   resetForm(){
@@ -48,10 +52,14 @@ export class RegisterComponent {
       prenom_ut:"",
       username:"",
       pass_ut:"",
+      imageURL:"./assets/img/OIP.jpeg",
+
      
       email:"",
       rolename:""
 
   }}
+
+
 
 }

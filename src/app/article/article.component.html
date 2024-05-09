@@ -1,0 +1,247 @@
+
+<app-navbar1></app-navbar1> 
+<div class="container">
+    <button class="btn btn-primary btn-add"(click)="confirmArtt()"><i class="fas fa-plus"></i>Add</button>
+    <!-- Le reste de votre code HTML -->
+</div>
+<div class="recent-articles">
+    <div class="container">
+       <div class="recent-wrapper">
+            <!-- section Tittle -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle mb-30">
+                        <h3>Recent Articles</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="recent-active dot-style d-flex dot-style">
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent1.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent2.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent3.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent2.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div> 
+<div class="recent-articles">
+    <div class="container">
+       <div class="recent-wrapper">
+            <!-- section Tittle -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle mb-30">
+                        <h3>Recent Articles</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="recent-active dot-style d-flex dot-style">
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent1.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent2.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent3.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-recent mb-100">
+                            <div class="what-img">
+                                <img src="./assets/template/assets/img/news/recent2.jpg" alt="">
+                            </div>
+                            <div class="what-cap">
+                                <span class="color1">Night party</span>
+                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>           
+<!--Recent Articles End -->
+<!--Start pagination -->
+<div class="pagination-area pb-45 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="single-wrap d-flex justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-start">
+                          <li class="page-item"><a class="page-link" href="#"><span class="flaticon-arrow roted"></span></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                            <li class="page-item"><a class="page-link" href="#">02</a></li>
+                            <li class="page-item"><a class="page-link" href="#">03</a></li>
+                          <li class="page-item"><a class="page-link" href="#"><span class="flaticon-arrow right-arrow"></span></a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End pagination  -->
+
+
+<div class="container">
+    <div class="row bootstrap snippets bootdeys">
+        <div class="col-md-8 col-sm-12">
+            <div class="comment-wrapper">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Comment panel
+                    </div>
+                    <div class="panel-body">
+                        <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
+                        <br><form #addCommentaire="ngForm"(ngSubmit)="onsubmitt (addComment)">
+                            <button type="submit" class="btn btn-info pull-right" >Post</button>
+                    </form>
+                        
+                        <div class="clearfix"></div>
+                        <hr>
+                        <ul class="media-list">
+                            <li class="media">
+                                <a href="#" class="pull-left">
+                                    <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                </a>
+                                <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                        <small class="text-muted">30 min ago</small>
+                                    </span>
+                                    <strong class="text-success">@MartinoMont</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a href="#" class="pull-left">
+                                    <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
+                                </a>
+                                <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                        <small class="text-muted">30 min ago</small>
+                                    </span>
+                                    <strong class="text-success">@LaurenceCorreil</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Lorem ipsum dolor <a href="#">#ipsumdolor </a>adipiscing elit.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a href="#" class="pull-left">
+                                    <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="img-circle">
+                                </a>
+                                <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                        <small class="text-muted">30 min ago</small>
+                                    </span>
+                                    <strong class="text-success">@JohnNida</strong>
+                                    <p>
+                                        Lorem ipsum dolor <a href="#">#sitamet</a> sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="addM">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Ajouter article</h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content p-3">
+                        <div class="tab-pane active" id="edit">
+                            <form #addArticle="ngForm"(ngSubmit)="onsubmit (addArticle)">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Titre</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text"  name="titre" required ngModel>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">contenu</label>
+                                    <div class="col-lg-9">
+                                        <textarea class="form-control"  name="contenu" required ngModel></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button class="btn btn-danger" (click)="closeAddd()">Annuler</button>
+                                    <button class="btn btn-secondary" type="submit" >Publier</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>

@@ -52,30 +52,24 @@
                             <div class="main-menu d-none d-md-block">
                                 <nav>                  
                                     <ul id="navigation">    
-                                        <li><a href="home">Actualités</a></li>
-                                        <li><a href="event">Evenements</a></li>
-                                        <li><a href="article">Articles</a></li>
-                                        <li *ngIf="!currentUser"><a href="register">s'authentifier</a></li>
-                                        <li *ngIf="!currentUser"><a href="login">Se connecter</a></li>
-                                         
-                                      
+                                        <li><a href="index.html">Actualités</a></li>
+                                        <li><a href="categori.html">Evenements</a></li>
+                                        <li><a href="about.html">Articles</a></li>
+                                        <li><a href="register"></a></li>
+                                        <li><a href="login">Login</a></li>
+                                        <li><a href="#">Pages</a>
+                                            <ul class="submenu">
+                                                <li><a href="elements.html">Element</a></li>
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="single-blog.html">Blog Details</a></li>
+                                                <li><a href="details.html">Categori Details</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>             
                         <div class="col-xl-2 col-lg-2 col-md-4">
-                          
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                    <img class="rounded-circle me-lg-2" src="./assets/template3/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <span class="d-none d-lg-inline-flex">{{ currentUser.username }}</span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                                    <a [routerLink]="['/table'] " class="dropdown-item">My Profile</a>
-                                    <a href="#" class="dropdown-item">Settings</a>
-                                    <a href="#" (click)="loggout()" class="dropdown-item">Log Out</a>
-                                </div>
-                            </div>
                             <div class="header-right-btn f-right d-none d-lg-block">
                                 <i class="fas fa-search special-tag"></i>
                                 <div class="search-box">
@@ -85,8 +79,6 @@
                                     </form>
                                 </div>
                             </div>
-                            
-
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">

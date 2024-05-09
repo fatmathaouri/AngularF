@@ -274,7 +274,9 @@ export class TableauComponent implements OnInit{
       console.error("Error deleting actualite:", error);
     });
   }
-  updateUserr(id:number){
-    this.router.navigate(["/profile",id])
+
+  loggout(){
+    this.userService.loggout();
   }
+ 
 }

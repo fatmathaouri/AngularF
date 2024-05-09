@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit {
       const userData= {username:response.user.username,
         email:response.user.email,
         rolename:response.user.rolename,
-        id:response.user.id
+        id:response.user.id,
+        imageURL:response.user.imageURL
       }
       localStorage.setItem("userAuth", JSON.stringify(userData));
 

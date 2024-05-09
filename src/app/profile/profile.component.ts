@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../modelss/user.model';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 declare var $:any;
 @Component({
   selector: 'app-profile',
@@ -13,8 +15,9 @@ export class ProfileComponent implements OnInit {
   accessToken!:any;
   user!:User;
   id!:number;
+  selectedFile: File | null = null;
   
-  constructor(private userService:UserService, private route:ActivatedRoute){}
+  constructor(private userService:UserService, private route:ActivatedRoute ,private http: HttpClient){}
 
   ngOnInit(): void {
 
@@ -57,8 +60,16 @@ export class ProfileComponent implements OnInit {
     if (this.user && this.accessToken) {
       this.userService.updateUser(this.id, this.user, this.accessToken).subscribe(updateUser => {
         console.log("Update", updateUser);
+       
         $('#updateModall').modal('hide');
       });
     }
   }
+
+  
+
+
+
+ 
+
 }

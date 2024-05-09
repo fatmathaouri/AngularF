@@ -38,20 +38,20 @@ body {
                 <div class="col-12 col-sm-auto mb-3">
                   <div class="mx-auto" style="width: 140px;">
                     <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                      <img src="{{currentUser.imageURL}}"/>
                     </div>
                   </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Welcome back!{{currentUser.username}}</h4>
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Welcome back! &nbsp;{{currentUser.username}}</h4>
                     
                     
                     <div class="mt-2">
                       <button class="btn btn-primary" >
                         <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
-                        <input type="file" class="form-control">
+                        <span>Change Photo</span><br>
+                        <input type="file"  />
                       </button>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ body {
                 </div>
               </div>
               <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+                <li class="nav-item"><a href="" class="active nav-link">Infos personnelles</a></li>
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
@@ -108,7 +108,7 @@ body {
                           <div class="col">
                             <div class="form-group">
                               <label>Current Password</label>
-                              <input class="form-control" type="password" name="pass_ut" [(ngModel)]="user.pass_ut">
+                              <input class="form-control" type="password" name="pass_ut" ngModel >
                             </div>
                           </div>
                         </div>
@@ -116,7 +116,7 @@ body {
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
+                              <input class="form-control" type="password">
                             </div>
                           </div>
                         </div>
@@ -144,25 +144,7 @@ body {
         </div>
       </div>
 
-      <div class="col-12 col-md-3 mb-3">
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="px-xl-3">
-              <button class="btn btn-block btn-secondary" >
-                <a href="table"></a>
-                <span>Logout</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h6 class="card-title font-weight-bold">Support</h6>
-            <p class="card-text">Get fast, free help from our friendly assistants.</p>
-            <button type="button" class="btn btn-primary">Contact Us</button>
-          </div>
-        </div>
-      </div>
+      
     </div>
 
   </div>

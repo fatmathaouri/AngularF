@@ -12,9 +12,15 @@ import { UpdateActualiteComponent } from './update-actualite/update-actualite.co
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { UpdateCommentComponent } from './update-comment/update-comment.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ArticleComponent } from './article/article.component';
+import { EventComponent } from './event/event.component';
+
+import { Home2Component } from './home2/home2.component';
+import { DetailsComponent } from './details/details.component';
 
 
 const routes: Routes = [
+  {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent},
   {path: "login",component:LoginComponent},
   {path : "register",component:RegisterComponent},
@@ -26,7 +32,11 @@ const routes: Routes = [
   {path:"updateee/:id_actualite",component:UpdateActualiteComponent},
   {path:"updateuser/:id",component:UpdateUserComponent},
   {path:"updateComment/:commentId",component:UpdateCommentComponent},
-  {path:"profile/:id",component:ProfileComponent}
+  {path:"profile/:id",component:ProfileComponent},
+  {path : "article",component:ArticleComponent},
+  {path :"event",component:EventComponent},
+  {path:"homee",component:Home2Component},
+  {path:"details",component:DetailsComponent}
 ];
 
 @NgModule({

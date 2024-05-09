@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { commentaire } from './modelss/commentaire.modal';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { commentaire } from './modelss/commentaire.modal';
 export class CommentService {
 
   private apiUrl="http://localhost:8082/"
+  private user:any =  localStorage.getItem('userAuth')
 
   constructor(private httpClient:HttpClient) { }
 
@@ -42,5 +44,14 @@ export class CommentService {
       "Authorization": "Bearer " + accessToken
     });
     return this.httpClient.get<commentaire>(this.apiUrl + "getCommentaireById/" + commentId, { headers });
+  }
+
+  addComment( commentaire: NgForm): Observable<commentaire> {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+      'Content-Type': 'application/json'
+    });
+    console.log(JSON.parse(this.user).id)
+    return this.httpClient.post<commentaire>(this.apiUrl+ "addCommentaire/user/{userId}/evenement/{idevenement}/"+JSON.parse(this.user).id, commentaire.value, { headers });
   }
 }

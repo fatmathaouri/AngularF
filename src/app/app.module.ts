@@ -21,6 +21,13 @@ import { UpdateActualiteComponent } from './update-actualite/update-actualite.co
 import { ProfileComponent } from './profile/profile.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { DetailsComponent } from './details/details.component';
+import { EventComponent } from './event/event.component';
+import { ArticleComponent } from './article/article.component';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { Home2Component } from './home2/home2.component';
+import { FooterComponent } from './footer/footer.component';
+import { EventdetailsComponent } from './eventdetails/eventdetails.component';
+import { ArticledetailsComponent } from './articledetails/articledetails.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +47,14 @@ import { DetailsComponent } from './details/details.component';
        UpdateActualiteComponent,
        ProfileComponent,
        Navbar1Component,
-       DetailsComponent
+       DetailsComponent,
+       EventComponent,
+       ArticleComponent,
+       Navbar2Component,
+       Home2Component,
+       FooterComponent,
+       EventdetailsComponent,
+       ArticledetailsComponent
   ],
   imports: [
     BrowserModule,
